@@ -1,0 +1,32 @@
+@use './mixins' as mix;
+@use './variables' as var;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+* {
+	font: inherit;
+	user-select: none;
+}
+
+html {
+	// 1 rem = 10px => 10px / 16px = 62.5%
+	font-size: 62.5%;
+}
+
+body {
+	background: var.$very-dark-blue;
+
+	main {
+		width: 100%;
+		min-height: 100dvh;
+		display: grid;
+		place-items: center;
+		position: relative;
+	}
+}
